@@ -1,16 +1,10 @@
 document.querySelector('#calcular2').addEventListener('click', (event) =>{
   event.preventDefault();
   const n1 = parseFloat(document.querySelector('#n11').value);
-  const op2 = document.querySelector('#op').value;
   let r;
-  if(op2 == '2'){
-      r = n1 *0.002* 50 * 88.065 + " " + "mg de vit. c / 100ml";
-  }else if( op2 == '4'){
-    r = n1 *0.002* 25 * 88.065 + " " + "mg de vit. c / 100ml";
-  }else if(op2 == '5'){
-    r = n1 *0.002* 20 * 88.065 + " " + "mg de vit. c / 100ml";
+
+      r = (n1 *0.002* 50 * 88.065).toFixed(2) + " " + "mg de vit. c / 100ml";
   
-  }
   document.querySelector('#r2').innerHTML = r;
 });
 
