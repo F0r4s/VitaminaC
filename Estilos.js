@@ -1,7 +1,9 @@
 document.querySelector('#calcular2').addEventListener('click', (event) =>{
   event.preventDefault();
   const n1 = parseFloat(document.querySelector('#n11').value);
-  const r = (n1 *0.002* 50 * 88.065).toFixed(2) + " " + "mg de vit. c / 100ml";
+  const n2 = parseFloat(document.querySelector('#n12').value);
+  const n3 = parseFloat(document.querySelector('#n13').value);
+  const r = (n1 * n3 * (100/n2) * 88.065).toFixed(2) + " " + "mg de vit. c / 100ml";
   
   document.querySelector('#r2').innerHTML = r;
 });
